@@ -1,0 +1,310 @@
+/* ====== Theme Colors ====== */
+:root {
+    --primary-color: #316f99;
+    --secondary-color: #8fa1b4;
+    --text-color: #333;
+    --bg-light: #f8f9fa;
+    --bg-dark: #1e1e1e;
+}
+
+/* ====== General Styles ====== */
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    background: var(--bg-light);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ====== NavBar ====== */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(134, 204, 231, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* ====== Header ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    background: #102c38;
+    color: #e6e8e9;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header img {
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(110, 73, 73, 0.3);
+}
+
+/* ====== Sections====== */
+section {
+    padding: 60px 10%;
+    transition: opacity 0.6s ease-in-out;
+}
+
+section:nth-child(odd) {
+    background: var(--bg-light);
+}
+
+section:nth-child(even) {
+    background: var(--bg-dark);
+    color: white;
+}
+
+/* ====== Buttons ====== */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== Link Hover Effects ====== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, padding 0.2s;
+}
+
+a:hover {
+    background: rgba(52, 152, 219, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ====== Animations & Transitions ====== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====== Contact Form ====== */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    position: relative;
+    top: 15px;
+    left: 10px;
+    color: gray;
+    transition: 0.3s;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input:focus + label,
+form textarea:focus + label {
+    top: 0;
+    left: 5px;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+/* ====== Table Styling ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+
+#activate{
+    background-color: green;
+}
+
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+tr:hover {
+    background: rgba(189, 12, 12, 0.1);
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+    header, nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+}
+
+/* ====== Dark Mode====== */
+.dark-mode {
+    background: var(--bg-dark);
+    color: white;
+}
+
+.dark-mode nav {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+.dark-mode section:nth-child(odd) {
+    background: #333;
+}
+
+.dark-mode section:nth-child(even) {
+    background: #222;
+}
+
+/* ======Extra Features ====== */
+html {
+    scroll-behavior: smooth;
+}
+
+#darkMode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#darkMode {
+    background: var(--primary-color);
+}
+
+
+/* ====== Skills Progress Bar ====== */
+#skills {
+    margin: 40px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.progress-container {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 20px;
+    width: 0%;
+    background: #3498db;
+    border-radius: 25px;
+    transition: width 1s;
+}
+
+/* ====== Contact Section ====== */
+#contact {
+    background: #f8f8f8;
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* ====== Footer ====== */
+footer {
+    background: #10596b;
+    color: #ddc3c3;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #794646;
+    margin-top: 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(211, 179, 179, 0.1);
+}
+
+footer span {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+
+
+
